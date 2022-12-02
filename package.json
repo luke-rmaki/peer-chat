@@ -1,10 +1,14 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "name": "peer-chat",
+  "version": "0.0.1",
+  "description": "Peer2Peer chat app",
+  "main": "main.js",
+  "scripts": {
+    "dev:client": "pnpm --filter ./packages/client dev",
+    "dev:api": "deno run --allow-net ./packages/api/main.ts --watch",
+    "dev": "pnpm run dev:client && pnpm run dev:api"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Luke Ruokaismäki",
   "license": "ISC"
 }
